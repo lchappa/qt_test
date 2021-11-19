@@ -2,6 +2,7 @@
 #include "fenetre.h"
 #include <QtNetwork>
 #include <QApplication>
+#include <iostream>
 
 int main(int argc, char *argv[])
 {
