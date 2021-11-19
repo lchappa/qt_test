@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>fenetre</class>
+ <widget class="QMainWindow" name="fenetre">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>894</width>
+    <height>407</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Paramètrage pour afficheur Pixelix</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>10</y>
+      <width>391</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="0">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="urlLabel">
+         <property name="text">
+          <string>URL Pixelix :</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="urlEdit">
+         <property name="text">
+          <string>http://172.21.28.22</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>391</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="couleurButton">
+         <property name="text">
+          <string>Couleur du texte</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="ScrollButton">
+         <property name="text">
+          <string>Scrolling</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="send_txt">
+       <property name="text">
+        <string>Hello World</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="envoyerButton">
+       <property name="text">
+        <string>Envoyer texte</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>419</x>
+      <y>9</y>
+      <width>461</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QLabel" name="configLabel">
+       <property name="text">
+        <string>Brightness :</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="telechargementButton">
+       <property name="text">
+        <string>Télécharger</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextBrowser" name="textBrowser"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="brightnessLabel">
+       <property name="text">
+        <string>Brightness :</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QProgressBar" name="brightnessprogressBar">
+       <property name="value">
+        <number>0</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>156</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Luminosité :</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="send_brightness">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>140</y>
+      <width>261</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="pageStep">
+     <number>10</number>
+    </property>
+    <property name="sliderPosition">
+     <number>0</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="envoyerLum">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>190</y>
+      <width>391</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Envoyer Luminosité</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>160</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>telechargementButton</sender>
+   <signal>clicked()</signal>
+   <receiver>fenetre</receiver>
+   <slot>telecharger_brightness()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>421</x>
+     <y>49</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>279</x>
+     <y>109</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>envoyerButton</sender>
+   <signal>clicked()</signal>
+   <receiver>fenetre</receiver>
+   <slot>envoyer_txt()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>283</x>
+     <y>363</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>363</x>
+     <y>297</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>couleurButton</sender>
+   <signal>clicked()</signal>
+   <receiver>fenetre</receiver>
+   <slot>choixcouleur()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>122</x>
+     <y>279</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>131</x>
+     <y>297</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>urlEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>fenetre</receiver>
+   <slot>changer_url()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>164</x>
+     <y>61</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>126</x>
+     <y>97</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>envoyerLum</sender>
+   <signal>clicked()</signal>
+   <receiver>fenetre</receiver>
+   <slot>envoyer_lum()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>334</x>
+     <y>192</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>389</x>
+     <y>237</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>telecharger_brightness()</slot>
+  <slot>envoyer_txt()</slot>
+  <slot>choixcouleur()</slot>
+  <slot>changer_url()</slot>
+  <slot>luminosite()</slot>
+  <slot>envoyer_lum()</slot>
+ </slots>
+</ui>
